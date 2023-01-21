@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Anna-cloud1/react#readme",
   "dependencies": {
+    "create-react-app": "^3.3.0",
     "eslint": "^8.32.0"
   }
 }
