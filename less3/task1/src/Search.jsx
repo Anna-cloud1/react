@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Search = props => {
+const Search = props => {
   console.log(props);
   return (
     <div className="search">
@@ -12,3 +12,5 @@ export const Search = props => {
     </div>
   );
 };
+
+export default Search;
