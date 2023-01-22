@@ -1,7 +1,6 @@
 import React from 'react';
 
-export const Search = props => {
-  console.log(props);
+const Search = (props) => {
   return (
     <div className="search">
       <h1 className="search__title">{`Hello, ${props.name}. What to search for you?`}</h1>
@@ -12,3 +11,5 @@ export const Search = props => {
     </div>
   );
 };
+
+export default Search;
