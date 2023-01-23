@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.profile {
+padding: auto;
+text-align: center;
+border-radius: 20px;
+width: 250px;
+height: 200px;
+line-height: 25px;
+background-color: #d3caa769;
+
+&__name {
+  position: relative; 
+  top: 40px;
+font-size: 24px;
+color: rgba(54, 49, 39, 0.756);
+font-weight: 700;
+}
+
+&__birth {
+  position: relative; 
+  top: 50px;
+color: rgba(109, 108, 105, 0.756);
+font-weight: 700;
+}
+}
