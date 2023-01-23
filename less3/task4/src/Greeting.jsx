@@ -3,11 +3,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
+import moment from 'moment';
 
-const Greeting = props => {
+const years = date => moment(date).format('YY');
+
+const Greeting = (props) => {
+
   return (
     <div className="greeting">
-      My name is {props.name} {props.lastName}. I am {props.age} years old
+      My name is {props.firstName} {props.lastName}. I am {years(props.birthDate)} years old
     </div>
   );
 };
