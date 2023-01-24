@@ -3,8 +3,8 @@ import './index.scss'
 
 
 class GoodButton extends React.Component {
-  handleClick() {
-
+  handleClick(e) {
+    console.log(e.target.textContent)
     alert('Good job!')
 
   }
