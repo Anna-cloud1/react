@@ -15,6 +15,13 @@ class Clock extends Component {
     this.state = {
       offset: moment(getTimeWithOffset(this.props.offset)).format('LTS'),
     };
+
+    //  setInterval(() => {
+    //   this.setState({
+    //     offset: this.state.offset + 1,
+    //   });
+    // }, props.interval);
+  
   }
   render() {
     return (
