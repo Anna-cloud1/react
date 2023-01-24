@@ -3,7 +3,7 @@ import './index.scss'
 
 const GoodButton = () => (
 <button 
-class="fancy-button"
+className="fancy-button"
 onClick={() => alert("Good job!")}
 >
   Click me!
