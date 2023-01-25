@@ -27,17 +27,17 @@ class ColorPicker extends Component {
         <div>
           <button
             className="picker__button picker__button_coral"
-            onMouseMove={() => this.nameColorHandler('Coral')}
+            onMouseOver={() => this.nameColorHandler('Coral')}
             onMouseLeave={() => this.clearColorHandler()}
           ></button>
           <button
             className="picker__button picker__button_aqua"
-            onMouseMove={() => this.nameColorHandler('Aqua')}
+            onMouseOver={() => this.nameColorHandler('Aqua')}
             onMouseLeave={() => this.clearColorHandler()}
           ></button>
           <button
             className="picker__button picker__button_bisque"
-            onMouseMove={() => this.nameColorHandler('Bisque')}
+            onMouseOver={() => this.nameColorHandler('Bisque')}
             onMouseLeave={() => this.clearColorHandler()}
           ></button>
         </div>
