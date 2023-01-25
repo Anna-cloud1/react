@@ -7,18 +7,28 @@ class Toggler extends Component {
     this.state = {
       text: 'Off',
     };
-    this.stateOn = this.stateOn.bind(this);
   }
 
   stateOn() {
-  this.setState({
-  text: 'On'
-  });
+    this.setState({
+      text: 'On',
+    });
+  }
+  stateOff() {
+    this.setState({
+      text: 'Off',
+    });
+  }
+
+  onChangeText() {
+    if (this.state.text === 'Off') {
+      this.stateOn();
+    } else this.stateOff();
   }
 
   render() {
     return (
-      <div className="toggler" onClick={() => this.stateOn()}>
+      <div className="toggler" onClick={() => this.onChangeText()}>
         {this.state.text}
       </div>
     );
