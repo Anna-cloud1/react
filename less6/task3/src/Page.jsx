@@ -1,8 +1,8 @@
 import React, { Component, startTransition } from 'react';
 import Info from './Info';
 
-const text1 = 'Hello, world!';
-const text2 = 'Another exciting text.';
+const text1 = 'Price is 500$. Available in 2 colors';
+const text2 = 'Price is 650$. Not available in 1 color';
 
 class Page extends Component {
   state = {
@@ -28,13 +28,13 @@ class Page extends Component {
         <div className="actions">
           <button
             className="btn"
-            onClick={() => this.setText('Price is 500$. Available in 2 colors')}
+            onClick={() => this.setText(text1)}
           >
             Iphone 13
           </button>
           <button
             className="btn"
-            onClick={() => this.setText('Price is 650$. Not available in 1 color')}
+            onClick={() => this.setText(text2)}
           >
             Iphone 13 Pro
           </button>
