@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Online = ({ isOnline }) => {
+const Online = () => {
   return (
     <div className="status">
       <span className="status__text">Online</span>
-      <button className="status__btn" isOnline={isOnline}>
+      <button className="status__btn" >
        All good!
       </button>
     </div>

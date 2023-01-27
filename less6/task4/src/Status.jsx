@@ -10,17 +10,17 @@ class Status extends Component {
     };
   }
 
-  onlineHandler = () => {
-    this.setState({
-      isOnline: true,
-    });
-  };
+  // onlineHandler = () => {
+  //   this.setState({
+  //     isOnline: true,
+  //   });
+  // };
 
-  offlineHandler = () => {
-    this.setState = {
-      isOnline: false,
-    };
-  };
+  // offlineHandler = () => {
+  //   this.setState = {
+  //     isOnline: false,
+  //   };
+  // };
 
   render() {
     // const isOnl = this.state.isOnline ? (
@@ -32,9 +32,9 @@ class Status extends Component {
     return (
       <>
         {this.state.isOnline ? (
-          <Offline isOnline={this.offlineHandler} />
+          <Offline />
         ) : (
-          <Online isOnline={this.onlineHandler} />
+          <Online  />
         )}
       </>
     );
