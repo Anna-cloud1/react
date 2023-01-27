@@ -24,17 +24,15 @@ class Auth extends Component {
     });
   };
 
-
   render() {
-    
     return (
       <div className="panel">
         <Greeting isLoggedIn={this.state.isLoggedIn} />
-        {this.state.isLoggedIn ? 
-          <Logout onClick={this.handleLogout} />
-         : 
-          <Login onClick={this.handleLogin} />
-        }
+        {this.state.isLoggedIn ? (
+          <Logout onLogout={this.handleLogout} />
+        ) : (
+          <Login onLogin={this.handleLogin} />
+        )}
       </div>
     );
   }
