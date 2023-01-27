@@ -30,13 +30,13 @@ class Page extends Component {
             className="btn"
             onClick={() => this.setText(text1)}
           >
-            Iphone 13
+            IPhone 13
           </button>
           <button
             className="btn"
             onClick={() => this.setText(text2)}
           >
-            Iphone 13 Pro
+            IPhone 13 Pro
           </button>
           <button className="btn" onClick={() => this.setText(null)}>
             Clear
