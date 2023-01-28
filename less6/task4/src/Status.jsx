@@ -1,5 +1,17 @@
 import React, { Component } from 'react';
-import IsOnline from './isOnline';
+import Online from './Online';
+import Offline from './Offline';
+
+// import IsOnline from './isOnline';
+
+
+const IsOnline = props => {
+  if (props.isOnline) {
+    return <Offline />;
+  } else {
+    return <Online />;
+  }
+};
 
 class Status extends Component {
   constructor(props) {
