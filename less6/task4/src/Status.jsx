@@ -6,11 +6,11 @@ class Status extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isOnline: true,
+      isOnline: false,
     };
   }
   render() {
-    return this.state.isOnline ? <Offline isOnline={false} /> : <Online isOnline={true} />;
+    return <div className="status">{this.state.isOnline ? <Offline /> : <Online />}</div>;
   }
 }
 
