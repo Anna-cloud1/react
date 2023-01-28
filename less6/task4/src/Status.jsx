@@ -5,12 +5,12 @@ import Offline from './Offline';
 class Status extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isOnline: false,
-    };
+    // this.state = {
+    //   isOnline,
+    // };
   }
   render() {
-    return <div className="status">{this.state.isOnline ? <Offline /> : <Online />}</div>;
+    return <div className="status">{this.props.isOnline ? <Offline /> : <Online />}</div>;
   }
 }
 
