@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Online from './Online';
-import Offline from './Offline';
+import IsOnline from './isOnline';
 
 class Status extends Component {
   constructor(props) {
@@ -9,35 +8,8 @@ class Status extends Component {
       isOnline: false,
     };
   }
-
-  // onlineHandler = () => {
-  //   this.setState({
-  //     isOnline: true,
-  //   });
-  // };
-
-  // offlineHandler = () => {
-  //   this.setState = {
-  //     isOnline: false,
-  //   };
-  // };
-
   render() {
-    // const isOnl = this.state.isOnline ? (
-    //   <Offline isOnline={this.offlineHandler} />
-    // ) : (
-    //   <Online isOnline={this.onlineHandler} />
-    // );
-
-    return (
-      <>
-        {this.state.isOnline ? (
-          <Offline />
-        ) : (
-          <Online  />
-        )}
-      </>
-    );
+    return <IsOnline isOnline={false} />;
   }
 }
 
