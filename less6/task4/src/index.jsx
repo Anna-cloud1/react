@@ -5,6 +5,6 @@ import './index.scss'
 
 
 const rootElement = document.querySelector('#root');
-const element = < Status />;
+const element = < Status isOnline={false}/>;
 
 ReactDOM.render(element, rootElement);
