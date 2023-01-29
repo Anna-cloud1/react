@@ -12,11 +12,6 @@ class Auth extends Component {
     };
   }
 
-  handleLogin = () => {
-    this.setState({
-      isLoggedIn: true,
-    });
-  };
 
   handleSpinner = () => {
     this.setState({
@@ -39,20 +34,11 @@ class Auth extends Component {
     if (this.state.isLoggedIn) {
       return <Logout onLogout={this.handleLogout} />;
     } else if (!this.state.isLoggedIn) {
-      return <Login onLogin={this.handleLogin}/>;
-    } else if(!this.state.spinner) {
-return <Spinner size={'20 px'} onLogin={this.handleSpinner}/>
+      return <Login onLogin={this.handleSpinner} />;
+    } else if(this.state.spinner === true) {
+return <Spinner size={'20 px'} />
     }
 
-
-    //     return (
-    //       <>
-    // {/*
-    //         <Login />
-    //         
-    //
-    //       </>
-    //     );
   }
 }
 
