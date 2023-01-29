@@ -18,7 +18,7 @@ class Auth extends Component {
     });
     setTimeout(() => {
       this.setState({
-        
+        isLoggedIn: true,
       });
     }, 2000);
   };
@@ -33,7 +33,7 @@ class Auth extends Component {
     if (!this.state.isLoggedIn) {
       return <Login onLogin={this.onLogin} />;
     } else if (this.state.isLoggedIn === 'true') {
-      return <Spinner size="12px" />;
+      return <Spinner size="15px" />;
     } else if (this.state.isLoggedIn) {
       return <Logout onLogout={this.onLogout} />;
     }
