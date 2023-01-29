@@ -16,9 +16,15 @@ class Auth extends Component {
     this.setState({
       isLoggedIn: true,
     });
+  };
+
+  handleSpinner = () => {
+    this.setState({
+      spinner: true,
+    });
     setTimeout(() => {
       this.setState({
-        spinner: true,
+        isLoggedIn:true
       });
     }, 2000);
   };
@@ -32,15 +38,18 @@ class Auth extends Component {
   render() {
     if (this.state.isLoggedIn) {
       return <Logout onLogout={this.handleLogout} />;
-    } else {
-     return <Login onLogin={this.handleLogin} spinner={true} />;
+    } else if (!this.state.isLoggedIn) {
+      return <Login onLogin={this.handleLogin}/>;
+    } else if(!this.state.spinner) {
+return <Spinner size={'20 px'} onLogin={this.handleSpinner}/>
     }
+
 
     //     return (
     //       <>
     // {/*
     //         <Login />
-    //         <Spinner />
+    //         
     //
     //       </>
     //     );
