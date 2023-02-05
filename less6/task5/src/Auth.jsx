@@ -8,17 +8,18 @@ class Auth extends Component {
     super(props);
     this.state = {
       isLoggedIn: false,
-      // spinner: false,
+      spinner: false,
     };
   }
 
   onLogin = () => {
     this.setState({
-      isLoggedIn: 'true',
+      spinner: true,
     });
     setTimeout(() => {
       this.setState({
         isLoggedIn: true,
+        spinner: false
       });
     }, 2000);
   };
@@ -30,12 +31,12 @@ class Auth extends Component {
   };
 
   render() {
-    if (!this.state.isLoggedIn) {
-      return <Login onLogin={this.onLogin} />;
-    } else if (this.state.isLoggedIn === 'true') {
+    if (this.state.isLoggedIn) {
+      return <Logout onLogout={this.onLogout} />
+    } else if (this.state.spinner === true) {
       return <Spinner size="15px" />;
-    } else if (this.state.isLoggedIn) {
-      return <Logout onLogout={this.onLogout} />;
+    } else if (!this.state.isLoggedIn) {
+      return <Login onLogin={this.onLogin} />;
     }
   }
 }
