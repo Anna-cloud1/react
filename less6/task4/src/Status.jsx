@@ -10,7 +10,10 @@ class Status extends Component {
     };
   }
   render() {
-    return <div className="status">{this.props.isOnline ? <Online /> : <Offline />}</div>;
+    if (this.state.isOnline) {
+      return <Online />;
+    }
+    return <Offline />;
   }
 }
 
