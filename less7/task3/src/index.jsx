@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss'
-import TransactionList from './TransactoinsList';
+import TransactionList from './TransactionsList';
 
 const rootElement = document.querySelector('#root');
 
