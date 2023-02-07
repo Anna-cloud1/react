@@ -15,12 +15,12 @@ class UsersList extends Component {
   };
 
   render() {
-    console.log(this.props.users)
+    console.log(this.props.users);
     let usersList;
     if (this.state.sorting) {
-      usersList = this.props.users.slice().sort((a, b) =>
-        this.state.sorting === 'asc' ? a.age - b.age : b.age - a.age,
-      );
+      usersList = this.props.users
+        .slice()
+        .sort((a, b) => (this.state.sorting === 'asc' ? a.age - b.age : b.age - a.age));
     } else {
       usersList = this.props.users;
     }
