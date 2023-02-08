@@ -18,7 +18,7 @@ class Life extends Component {
     // this.props, this,state;
     // console.log(nextProps, nextState);
      console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
-return null
+return true;
   } // в зависимости от того как изм пропсы или стейт, принимает решение запускать рендер или нет (сущ для оптимизации)
   // выполняется до рендера
 
