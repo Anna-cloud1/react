@@ -4,25 +4,20 @@ import React, { Component} from "react";
 class Life extends Component {
   constructor(props) {
     super(props);
-    console.log( '=> constructor')
+    console.log('good place to create state');
 
   }
 
   componentDidMount() {
-    console.log('=> componentDidMount');
+    console.log('componentDidMount: API calls, subscriptions');
 
   } // создание 
-
-
-  componentWillUnmount() {
-     console.log('=> componentWillUnmount');
-  } // очистка, компонента уходит со стр
 
 
   shouldComponentUpdate(nextProps, nextState) {
     // this.props, this,state;
     console.log(nextProps, nextState);
-     console.log('=> shouldComponentUpdate');
+     console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
 return nextProps.number % 2 
   } // в зависимости от того как изм пропсы или стейт, принимает решение запускать рендер или нет (сущ для оптимизации)
   // выполняется до рендера
@@ -31,10 +26,21 @@ return nextProps.number % 2
   componentDidUpdate(prevProps, prevState) {
     this.props
     console.log(prevProps);
-console.log('=> componentDidUpdate');
-  } // выполняется после рендера, с уже обновленными значемниями 
+console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
+  } // выполняется после рендера, с уже обновленными значемниями \
+
+
+  componentWillUnmount() {
+     console.log('componentWillUnmount(): cleanup before DOM related to component will be removed');
+  } // очистка, компонента уходит со стр
+
+
+
+
+
 render() {
-   console.log( '=> render')
+
+   console.log('return React element to build DOM');
   return (
    <>
     <div className="number">{this.props.number}</div>
