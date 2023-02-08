@@ -23,9 +23,8 @@ return nextProps.number % 2
   // выполняется до рендера
 
 
-  componentDidUpdate(prevProps, prevState) {
-    this.props
-    console.log(prevProps);
+  componentDidUpdate() {
+  
 console.log('componentDidUpdate(prevProps, prevState): some updates based on new props');
   } // выполняется после рендера, с уже обновленными значемниями \
 
