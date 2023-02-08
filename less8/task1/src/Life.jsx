@@ -14,11 +14,11 @@ class Life extends Component {
   } // создание 
 
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate() {
     // this.props, this,state;
-    console.log(nextProps, nextState);
+    // console.log(nextProps, nextState);
      console.log('shouldComponentUpdate(nextProps, nextState): decide to render or not to render');
-return nextProps.number % 2 
+return null
   } // в зависимости от того как изм пропсы или стейт, принимает решение запускать рендер или нет (сущ для оптимизации)
   // выполняется до рендера
 
