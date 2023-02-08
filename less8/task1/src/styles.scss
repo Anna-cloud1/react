@@ -1,0 +1,22 @@
+body {
+  font-family: monospace;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  width: 70px;
+  height: 45px;
+  border: none;
+  margin-right: 10px;
+  background-color: aqua;
+  color: rgb(32, 51, 51);
+  text-transform: uppercase;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  margin: 40px;
+}
