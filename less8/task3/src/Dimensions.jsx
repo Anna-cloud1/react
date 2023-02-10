@@ -26,7 +26,7 @@ class Dimension extends Component {
   }
 
   componentWillUnmount() {
-    window.remoteEventListener('resize', this.onResize);
+    window.removeEventListener('resize', this.onResize);
   }
   render() {
     return <div className="dimensions">{`${this.state.width}px - ${this.state.height}px`}</div>;
