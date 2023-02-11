@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Offline from './Offline';
-import Online from './Online';
+
 
 class ConnectionStatus extends Component {
   state = {
@@ -30,10 +29,10 @@ class ConnectionStatus extends Component {
   };
 
   render() {
-    if (this.status === 'offline') {
-      return <Offline />;
+    if (this.state.status === 'offline') {
+      return <div className="status status_offline">{this.state.status}</div>;
     } else {
-      return <Online />;
+      return <div className="status">{this.state.status}</div>;
     }
   }
 }

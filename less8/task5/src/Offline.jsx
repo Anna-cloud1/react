@@ -1,7 +1,7 @@
-import React from 'react';
+// import React from 'react';
 
-const Offline = () => {
-  return <div className="status status_offline">Offline</div>;
-};
+// const Offline = ({status}) => {
+//   return <div className="status status_offline">{this.state.status}</div>;
+// };
 
-export default Offline;
+// export default Offline;

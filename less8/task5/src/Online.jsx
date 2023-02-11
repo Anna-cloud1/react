@@ -1,10 +1,7 @@
-import React from "react";
+// import React from "react";
 
-const Online = () => {
-return (
-  <div className="status">Online</div>
+// const Online = ({status}) => {
+// return <div className="status">{this.state.status}</div>;
+// }
 
-)
-}
-
-export default Online;
+// export default Online;
