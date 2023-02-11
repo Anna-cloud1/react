@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import NumbersList from './NumbersList';
+import ConnectionStatus from './ConnectionStatus'
 
 const rootElement = document.querySelector('#root');
 
 
-ReactDOM.render(, rootElement);
+ReactDOM.render(< ConnectionStatus />, rootElement);
