@@ -11,7 +11,7 @@ this.setState({value:event.target.value})
 
   search = (event) => {
     event.preventDefault();
-    console.log(this.state.value)
+    alert(this.state.value)
   }
   render() { 
     return (
