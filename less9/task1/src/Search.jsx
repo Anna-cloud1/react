@@ -22,7 +22,7 @@ class Search extends Component {
           value={this.state.value}
           className="search__input"
         />
-        <button className="search__button" onClick={this.search} type="submit">
+        <button className="search__button" onClick={this.search}>
           Search
         </button>
       </form>
