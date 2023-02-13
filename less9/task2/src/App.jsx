@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import UserForm from './UserForm';
+import React, { Component } from "react";
+import UserForm from "./UserForm";
 
 class App extends Component {
-  createUser = obj => {
+  createUser = (obj) => {
     console.log(obj);
   };
 
