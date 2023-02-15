@@ -1,40 +1,41 @@
 import React, { Component } from 'react';
-import Filter from './Filter';
 import User from './User';
+import './index.scss';
+import Filter from './Filter';
 
 class UsersList extends Component {
   state = {
-    users: '',
-    value: '',
-    filterText: '',
+// users: this.props.users,
+// count: this.props.users.length,
+// filterText: '',
+   value: '',
   };
 
-  handleChange = event => {
+  onChange = e => {
     this.setState({
-      filterText: event.target.value,
+      value: e.target.value,
     });
   };
 
   render() {
-    const usersList = users => {
-      users.filter(user => {
-        if (user.name.toLowerCase.includes(this.state.value.toLowerCase())) {
-          return user;
-        }
-      });
-    };
+    const usersList = this.props.users.filter(user => {
+      if (user.name.toLowerCase().includes(this.state.value.toLowerCase())) {
+        return user;
+      }
+    });
 
     return (
       <div>
-        <Filter onChange={this.handleChange} count={usersList.length} />
-
-
-        <ul className='users'>
-        {usersList.map(users => (
-          <User key={users.id} {...users} />
-        ))}
-</ul>
-
+        <Filter 
+        filterText={this.state.value} 
+        count={usersList.length} 
+        onChange={this.onChange} 
+        />
+        <ul className="users">
+          {usersList.map(users => (
+            <User key={users.id} {...users} />
+          ))}
+        </ul>
       </div>
     );
   }
