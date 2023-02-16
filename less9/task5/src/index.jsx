@@ -1,9 +1,9 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
-
+import Game from './Game';
 
 const rootElement = document.querySelector('#root');
 
 
-ReactDOM.render(, rootElement);
+ReactDOM.render(< Game/>, rootElement);
