@@ -4,15 +4,17 @@ import Profile from './Profile';
 
 class App extends Component {
   constructor(props) {
-    super(props)
-      this.state = {
-    userData: {
-      firstName: 'Ann',
-      lastName: 'Chufarova',
-    },
-  };
+    super(props);
+    this.state = {
+      userData: {
+        firstName: 'Ann',
+        lastName: 'Chufarova',
+      },
+    };
   }
+  componentDidMount() {}
 
+  componentWillUnmount() {}
 
   handleChange = event => {
     const { name, value } = event.target;
