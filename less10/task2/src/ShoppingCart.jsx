@@ -7,8 +7,8 @@ class ShoppingCart extends Component {
     cartItems: [
       {
         id: '1',
-        name: 'iPhone 11',
-        price: 999,
+        name: 'iPhone 13',
+        price: 699,
       },
       {
         id: '2',
@@ -18,7 +18,7 @@ class ShoppingCart extends Component {
       {
         id: 3,
         name: 'iPhone 14 Pro Max Purple',
-        price: 1300,
+        price: 900,
       }
     ],
   };
