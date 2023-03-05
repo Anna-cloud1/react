@@ -12,9 +12,7 @@ class App extends Component {
       },
     };
   }
-  componentDidMount() {}
 
-  componentWillUnmount() {}
 
   handleChange = event => {
     const { name, value } = event.target;
