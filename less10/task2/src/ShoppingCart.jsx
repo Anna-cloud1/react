@@ -15,6 +15,11 @@ class ShoppingCart extends Component {
         name: 'iPad Pro',
         price: 799,
       },
+      {
+        id: 3,
+        name: 'iPhone 14 Pro Max Purple',
+        price: 1300,
+      }
     ],
   };
   render() {
