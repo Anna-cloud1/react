@@ -6,26 +6,26 @@ class ShoppingCart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-    cartItems: [
-      {
-        id: '1',
-        name: 'iPhone 13',
-        price: 699,
-      },
-      {
-        id: '2',
-        name: 'iPad Pro',
-        price: 799,
-      },
-      {
-        id: 3,
-        name: 'iPhone 14 Pro Max Purple',
-        price: 900,
-      }
-    ],
-  };
+      cartItems: [
+        {
+          id: '1',
+          name: 'iPhone 13',
+          price: 699,
+        },
+        {
+          id: '2',
+          name: 'iPad Pro',
+          price: 799,
+        },
+        {
+          id: 3,
+          name: 'iPhone 14 Pro Max Purple',
+          price: 900,
+        },
+      ],
+    };
   }
-  
+
   render() {
     const count = this.state.cartItems.length;
     return (
@@ -36,6 +36,7 @@ class ShoppingCart extends Component {
     );
   }
 }
+
 
 export default ShoppingCart;
   
