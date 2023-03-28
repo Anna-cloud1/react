@@ -21,8 +21,12 @@ class TasksList extends Component {
         }
       })
       .then(tasksList => {
+        const tasks = tasksList.map(({ id, ...task }) => ({
+          id,
+          ...task,
+        }))
         this.setState({
-          tasks: tasksList,
+          tasks: tasks,
         });
       });
   };
@@ -64,6 +68,9 @@ class TasksList extends Component {
     //3 save updt list
 
     const updatedTasks = this.state.tasks.map(task => {
+
+
+      
       if (task.id === id) {
         return {
           ...task,
