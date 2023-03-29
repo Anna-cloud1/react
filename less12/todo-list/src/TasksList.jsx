@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import CreateTaskInput from './CreateTaskInput';
 import Task from './Task';
-
-const baseUrl = `https://6422fd57001cb9fc20354c18.mockapi.io/api/v1/tasks`;
+import { createTask, fetchTasksList, updateTask, deleteTask } from './tasksGateway';
 
 class TasksList extends Component {
   state = {
@@ -10,97 +9,39 @@ class TasksList extends Component {
   };
 
   componentDidMount() {
-    this.fetchTasksList();
+    this.fetchTasks();
   }
 
-  fetchTasksList = () => {
-    fetch(baseUrl)
-      .then(res => {
-        if (res.ok) {
-          return res.json();
-        }
-      })
-      .then(tasksList => {
-        const tasks = tasksList.map(({ id, ...task }) => ({
-          id,
-          ...task,
-        }));
-        this.setState({
-          tasks: tasks,
-        });
-      });
+  fetchTasks = () => {
+    fetchTasksList().then(tasksList =>
+      this.setState({
+        tasks: tasksList,
+      }), 
+    );
   };
 
   onCreate = text => {
-    // для создания на сервере
-    // 1 create task object +
-    // 2. post object to server +
-    // 3.  fetch list from server +
-
     const newTask = {
       text,
       done: false,
     };
 
-    fetch(baseUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json;utc-8',
-      },
-      body: JSON.stringify(newTask),
-    }).then(response => {
-      if (response.ok) {
-        this.fetchTasksList();
-      } else {
-        throw new Error('Failed to create task');
-      }
-    });
-
-    //   const updatedTasks = tasks.concat(newTask);
-    //   this.setState({
-    //     tasks: updatedTasks,
-    //   });
+    createTask(newTask).then(() => this.fetchTasks());
   };
 
   handleTaskStatusChange = id => {
-    //1 find task in state by id
-    // create upd task
-    // upd task on server
-    // fetch upd task list
-
     const { done, text } = this.state.tasks.find(task => task.id === id);
     const updatedTask = {
       text,
       done: !done,
     };
-    fetch(`${baseUrl}/${id}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json;utc-8',
-      },
-      body: JSON.stringify(updatedTask),
-    }).then(response => {
-      if (response.ok) {
-        this.fetchTasksList();
-      } else {
-        throw new Error('Failed to create task');
-      }
-    });
+   updateTask(id, updatedTask).then(() => this.fetchTasks());
   };
 
   handleTaskDelete = id => {
-    // 1 filter tasks
-    // 2. update state
 
-    fetch(`${baseUrl}/${id}`, {
-      method: 'DELETE',
-    }).then(response => {
-      if (response.ok) {
-        this.fetchTasksList();
-      } else {
-        throw new Error('Failed to delete task');
-      }
-    });
+    deleteTask(id).then(() => this.fetchTasks());
+   
   };
 
   render() {
