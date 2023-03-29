@@ -24,7 +24,7 @@ class TasksList extends Component {
         const tasks = tasksList.map(({ id, ...task }) => ({
           id,
           ...task,
-        }))
+        }));
         this.setState({
           tasks: tasks,
         });
@@ -63,24 +63,28 @@ class TasksList extends Component {
   };
 
   handleTaskStatusChange = id => {
-    //1 find task in a list
-    //2 toggle done value
-    //3 save updt list
+    //1 find task in state by id
+    // create upd task
+    // upd task on server
+    // fetch upd task list
 
-    const updatedTasks = this.state.tasks.map(task => {
-
-
-      
-      if (task.id === id) {
-        return {
-          ...task,
-          done: !task.done,
-        };
+    const { done, text } = this.state.tasks.find(task => task.id === id);
+    const updatedTask = {
+      text,
+      done: !done,
+    };
+    fetch(`${baseUrl}/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json;utc-8',
+      },
+      body: JSON.stringify(updatedTask),
+    }).then(response => {
+      if (response.ok) {
+        this.fetchTasksList();
+      } else {
+        throw new Error('Failed to create task');
       }
-      return task;
-    });
-    this.setState({
-      tasks: updatedTasks,
     });
   };
 
