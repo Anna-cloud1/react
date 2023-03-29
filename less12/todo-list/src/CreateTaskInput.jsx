@@ -1,31 +1,29 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-class CreateTaskInput extends Component {
+class CreateTaskInput extends React.Component {
   state = {
     value: '',
   };
 
-  handleChange = event => {
-    this.setState({
-      value: event.target.value,
-    });
+  inputChangeHandler = e => {
+    this.setState({ value: e.target.value });
   };
 
-  handleTaskCreate = () => {
+  taskCreateHandler = () => {
     this.props.onCreate(this.state.value);
     this.setState({ value: '' });
   };
-
   render() {
     return (
       <div className="create-task">
         <input
+          className="create-task__input"
           type="text"
           value={this.state.value}
-          onChange={this.handleChange}
-          className="create-task__input"
+          onChange={this.inputChangeHandler}
         />
-        <button className="btn" onClick={this.handleTaskCreate}>
+        <button className="btn create-task__btn" onClick={this.taskCreateHandler}>
           Create
         </button>
       </div>
@@ -35,6 +33,6 @@ class CreateTaskInput extends Component {
 
 export default CreateTaskInput;
 
-// 1 взять текст из инпута +
-// 2 создать ззадание с этим тестом (создать объект с айди, тесктом и чекбоксом) +
-// 3 добавить объект в весь список +
+CreateTaskInput.propTypes = {
+  onCreate: PropTypes.func.isRequired,
+};
