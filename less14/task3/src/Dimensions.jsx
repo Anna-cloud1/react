@@ -15,7 +15,12 @@ useEffect(() => {
     const { innerWidth, innerHeight } = e.target;
     setDimensions({ width: innerWidth, height: innerHeight });
   };
-  window.addEventListener('resize', handleResize)
+  window.addEventListener('resize', handleResize);
+
+  return () => {
+    window.removeEventListener('resize', handleResize);  
+  }
+
 }, [])
 
 
