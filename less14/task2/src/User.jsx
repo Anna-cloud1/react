@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
 import { useParams } from 'react-router-dom';
+
 
 const User = () => {
   const { userId } = useParams();
@@ -7,14 +8,15 @@ const User = () => {
 
   useEffect(() => {
     fetch(`https://api.github.com/users/${userId}`)
-      .then(response => {
-        if (response.ok) {
-          return response;
-        } else throw new Error('Failed to fetch user data');
+      .then(res=> {
+        if (res.ok) {
+          return res.json();
+        } 
+        throw new Error();
       })
-      .then(response => response.json())
-      .then(data => {
-        setUserData(data);
+      
+      .then(UserData => {
+        setUserData(UserData);
       });
   }, [userId]);
 
