@@ -13,20 +13,14 @@ const element = (
         <label className="form-label" htmlFor="name">
           Name
         </label>
-        <input 
-        className="form-input" 
-        type="text" 
-        id="name" 
-        name="name" 
-        value="anonymous" 
-        />
+        <input className="form-input" type="text" id="name" name="name" value="anonymous" />
       </div>
       <div className="form-control">
         <label className="form-label" id="age" htmlFor="age">
           Age
         </label>
         <input className="form-input" type="number" value="17" name="age" />
-        <span style={style}>To young</span>
+        <span style={style}>Too young</span>
       </div>
       <button className="submit-button" type="submit">
         Submit

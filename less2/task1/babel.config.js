@@ -3,8 +3,5 @@ module.exports = {
     ['@babel/preset-env', { targets: '> 1%', useBuiltIns: 'usage', corejs: 3 }],
     '@babel/preset-react',
   ],
-  plugins: [
-    '@babel/plugin-proposal-class-properties',
-    '@babel/plugin-transform-react-jsx',
-  ],
+  plugins: ['@babel/plugin-proposal-class-properties', '@babel/plugin-transform-react-jsx'],
 };

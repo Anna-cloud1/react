@@ -1,17 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles.css';
+
 const rootElement = document.querySelector('#root');
 
 const renderSeconds = time => {
-  const seconds = new Date(time).getSeconds();
+  let seconds = new Date(time).getSeconds();
+  const backgroundCol = seconds % 2 === 0 ? '#fff' : '#000';
 
-  const backgroundColor = seconds % 2 === 0 ? '#fff' : '#000';
-  const textColor = seconds % 2 === 0 ? '#000' : '#fff';
+  const textCol = seconds % 2 === 0 ? '#000' : '#fff';
 
   const styles = {
-    color: textColor,
-    backgroundColor,
+    color: textCol,
+    backgroundColor: backgroundCol,
   };
 
   const element = (
@@ -22,11 +23,7 @@ const renderSeconds = time => {
 
   ReactDOM.render(element, rootElement);
 };
-;
 
+renderSeconds(new Date());
 
-setInterval(() => {
-
-renderSeconds(new Date())
-}, 1000
-)
+setInterval(() => renderSeconds(new Date()), 1000)
