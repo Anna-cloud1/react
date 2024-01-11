@@ -1,9 +1,22 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Search from './Search';
-import './index.scss';
-import './search.scss';
+import './comment.scss';
+import moment from 'moment';
 
-const rootElement = document.querySelector('#root');
+const formatDate = date => moment(date).format('DD MMM YYYY');
 
-ReactDOM.render(<Search name="Tom" />, rootElement);
+function Comment(props) {
+  return (
+    <div className="comment">
+      <div className="user-info">
+        <img className="avatar" src={props.user.avatarUrl} alt={props.user.name} />
+        <div className="user-info__name">{props.user.name}</div>
+      </div>
+      <div className="comment__text">{props.text}</div>
+      <div className="comment__date">{formatDate(props.date)}</div>
+    </div>
+  );
+}
+
+export default Comment;
+
+ç
