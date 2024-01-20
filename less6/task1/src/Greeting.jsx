@@ -2,13 +2,11 @@ import React from 'react';
 import './index.scss';
 import UserGreeting from './UserGreeting';
 import GuestGreeting from './GuestGreeting';
-//
-const Greeting =( props )=> {
 
-  if (props.isLoggedIn) {
+const Greeting = ({ isLoggedIn }) => {
+  if (isLoggedIn) {
     return <UserGreeting />;
   }
-
   return <GuestGreeting />;
 };
 

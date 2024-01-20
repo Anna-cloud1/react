@@ -1,37 +1,37 @@
 import React, { Component } from 'react';
 import './index.scss';
 
+
 class Toggler extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: 'Off',
+      buttonState: 'Off',
     };
   }
 
   stateOn() {
     this.setState({
-      text: 'On',
-    });
-  }
-  stateOff() {
-    this.setState({
-      text: 'Off',
+      buttonState: 'On',
     });
   }
 
-  onChangeText() {
-    if (this.state.text === 'Off') {
+  stateOff() {
+    this.setState({
+      buttonState: 'Off',
+    });
+  }
+
+  stateChanger() {
+    if (this.state.buttonState === 'Off') {
       this.stateOn();
     } else this.stateOff();
   }
 
   render() {
-    return (
-      <div className="toggler" onClick={() => this.onChangeText()}>
-        {this.state.text}
-      </div>
-    );
+   return <div className="toggler" onClick={() => this.stateChanger()}>
+      {this.state.buttonState}
+    </div>;
   }
 }
 
