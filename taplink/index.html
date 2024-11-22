@@ -1,0 +1,277 @@
+<div style="font-family: 'Roboto', sans-serif; max-width: 900px; margin: 20px auto; color: #333;">
+  <!-- Заголовок страницы -->
+  <h1 style="text-align: center; color: #0033a0; margin-bottom: 20px; font-size: 26px; font-weight: bold;">
+    Работа в Словакии: Выбор подходящей визы
+  </h1>
+  
+  <!-- Внимание -->
+  <div style="background-color: #f9f9f9; border: 1px solid #d9534f; border-radius: 10px; padding: 15px; margin-bottom: 20px; text-align: center;">
+    <p style="color: #d9534f; font-size: 18px; font-weight: bold;">⚠️ ВНИМАНИЕ: КОЛИЧЕСТВО МЕСТ ОГРАНИЧЕНО!</p>
+  </div>
+
+  <!-- Сравнительная таблица -->
+  <button onclick="toggleTable()" style="background-color: #0033a0; color: #fff; font-size: 18px; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; width: 100%; margin-bottom: 20px;">
+    Сравнить визы на 90 и 365 дней
+  </button>
+  <div id="accordion" style="padding: 20px; background-color: #f9f9f9;">
+    <details onclick="closeAll(this)" style="margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: linear-gradient(to bottom, #ffffff, #f1f1f1);">
+      <summary style="font-weight: bold; font-size: 18px; cursor: pointer; color: #0033a0; margin-bottom: 10px;">Виза на 90 дней + ВНЖ</summary>
+      <p style="margin-top: 10px;"><strong>Что это?</strong><br>Это краткосрочная виза, которая позволяет вам приехать в Словакию, чтобы подать документы на вид на жительство (ВНЖ). После получения ВНЖ вы сможете работать легально и жить в стране длительное время.</p>
+      <p style="margin-top: 10px;"><strong>Плюсы:</strong></p>
+      <ul style="margin: 10px 0 20px 20px; list-style-type: disc;">
+        <li>Возможность сменить работодателя после получения ВНЖ.</li>
+        <li>Оформление ВНЖ прямо в Словакии.</li>
+        <li>Подходит для тех, кто хочет работать долго или сменить работу в будущем.</li>
+      </ul>
+      <p><strong>Минусы:</strong></p>
+      <ul style="margin: 10px 0 20px 20px; list-style-type: disc;">
+        <li>Нужно собрать много документов (например, справки о несудимости с апостилем).</li>
+        <li>Работать можно только после получения ВНЖ.</li>
+        <li>Процесс занимает больше времени, потому что нужно сначала получить визу, а потом ВНЖ.</li>
+      </ul>
+    </details>
+
+    <details onclick="closeAll(this)" style="margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: linear-gradient(to bottom, #ffffff, #f1f1f1);">
+      <summary style="font-weight: bold; font-size: 18px; cursor: pointer; color: #0033a0; margin-bottom: 10px;">Национальная виза на 365 дней</summary>
+      <p style="margin-top: 10px;"><strong>Что это?</strong><br>Это долгосрочная виза, которая позволяет сразу работать в Словакии до одного года без необходимости немедленного оформления ВНЖ.</p>
+      <p style="margin-top: 10px;"><strong>Плюсы:</strong></p>
+      <ul style="margin: 10px 0 20px 20px; list-style-type: disc;">
+        <li>Можно сразу начать работать.</li>
+        <li>Меньше документов для подачи (не требуется справка о несудимости).</li>
+        <li>Подходит для тех, кто планирует работать в Словакии только год.</li>
+      </ul>
+      <p><strong>Минусы:</strong></p>
+      <ul style="margin: 10px 0 20px 20px; list-style-type: disc;">
+        <li>Нельзя сменить работодателя в течение действия визы.</li>
+        <li>Зависит от квот на профессию — если квота закончилась, придется ждать.</li>
+        <li>После истечения визы нужно оформить ВНЖ, чтобы остаться работать.</li>
+      </ul>
+    </details>
+
+    <details onclick="closeAll(this)" style="border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: linear-gradient(to bottom, #ffffff, #f1f1f1);">
+      <summary style="font-weight: bold; font-size: 18px; cursor: pointer; color: #0033a0; margin-bottom: 10px;">Как выбрать?</summary>
+      <ul style="margin: 10px 0 20px 20px; list-style-type: disc;">
+        <li>Если вы хотите работать сразу и не менять работодателя — выберите визу на 365 дней.</li>
+        <li>Если вам важна возможность сменить работу и вы готовы подождать ВНЖ — выберите визу на 90 дней.</li>
+      </ul>
+      <p>Мы поможем вам определиться и оформить все документы правильно!</p>
+    </details>
+  </div>
+</div>
+
+<script>
+  function closeAll(current) {
+    document.querySelectorAll("#accordion details").forEach((details) => {
+      if (details !== current) {
+        details.removeAttribute("open");
+      }
+    });
+  }
+</script>
+
+<div style="font-family: 'Roboto', sans-serif; max-width: 900px; margin: 20px auto; color: #333;">
+  <!-- Заголовок -->
+  <h1 style="text-align: center; color: #0033a0; font-size: 24px; margin-bottom: 20px;">Работа в Словакии с гарантией!</h1>
+
+  <!-- Кнопка с раскрывающимся списком -->
+  <div style="text-align: center; margin-bottom: 20px;">
+    <button 
+      onclick="toggleDetails()" 
+      style="padding: 10px 15px; background-color: #1e90ff; color: white; font-size: 16px; border: none; border-radius: 5px; cursor: pointer;">
+      ЭТАПЫ ОФОРМЛЕНИЯ ВИЗЫ и ВНЖ СЛОВАКИИ ЖМИ НА КНОПКУ ДЛЯ ПОДРОБНОСТЕЙ
+    </button>
+  </div>
+
+  <!-- Скрытый блок с этапами -->
+  <div id="visaDetails" style="display: none; background-color: #f9f9f9; border: 1px solid #ccc; border-radius: 8px; padding: 20px;">
+    <!-- Этапы оформления -->
+    <h2 style="text-align: center; color: #0033a0; margin-bottom: 20px;">Как проходит оформление?</h2>
+
+    <!-- Шаг 1 -->
+    <div style="margin-bottom: 15px;">
+      <h3 style="color: #0033a0;">1. Заполнение анкеты</h3>
+      <p style="font-size: 16px; line-height: 1.6;">
+        Первый шаг – заполнить нашу анкету. Это поможет нам лучше понять ваши пожелания, опыт и ожидания. После этого мы начнем подбор вакансии.
+      </p>
+      <a href="https://forms.amocrm.ru/rtldmcc" target="_blank" style="display: inline-block; margin-top: 10px; padding: 10px 15px; background-color: #1e90ff; color: white; text-decoration: none; border-radius: 5px; font-size: 16px;">Заполнить анкету Кандидата</a>
+    </div>
+
+    <!-- Шаг 2 -->
+    <div style="margin-bottom: 15px;">
+      <h3 style="color: #0033a0;">2. Сбор документов</h3>
+      <p style="font-size: 16px; line-height: 1.6;">
+        Для подачи на визу вам нужно подготовить следующие документы:
+      </p>
+      <ul style="font-size: 16px; line-height: 1.6; margin-left: 20px;">
+        <li>Загранпаспорт и внутренний паспорт (все заполненные страницы).</li>
+        <li>Справка о несудимости с QR-кодом и апостилем.</li>
+        <li>Подтверждение финансовой состоятельности.</li>
+        <li>Медицинская страховка.</li>
+        <li>Доказательство жилья (гарантийное письмо, аренда, прописка).</li>
+        <li>Рабочий контракт.</li>
+        <li>Анкета на визу.</li>
+        <li>Фото (3×3,5 см) – 2 шт.</li>
+      </ul>
+    </div>
+
+    <!-- Шаг 3 -->
+    <div style="margin-bottom: 15px;">
+      <h3 style="color: #0033a0;">3. Подача заявления на визу</h3>
+      <p style="font-size: 16px; line-height: 1.6;">
+        После подготовки документов мы поможем вам зарегистрироваться на подачу в консульство. Запись открывается <strong>25 числа каждого месяца</strong>. Мы гарантируем полное сопровождение.
+      </p>
+    </div>
+
+    <!-- Шаг 4 -->
+    <div style="margin-bottom: 15px;">
+      <h3 style="color: #0033a0;">4. Получение визы</h3>
+      <p style="font-size: 16px; line-height: 1.6;">
+        Сроки рассмотрения заявки в консульстве составляют <strong>30 дней</strong>. Общий процесс оформления занимает <strong>2,5–3,5 месяца</strong>. Мы будем на связи на каждом этапе.
+      </p>
+    </div>
+
+    <!-- Шаг 5 -->
+    <div style="margin-bottom: 15px;">
+      <h3 style="color: #0033a0;">5. Приезд в Словакию</h3>
+      <p style="font-size: 16px; line-height: 1.6;">
+        После приезда мы встречаем вас в аэропорту и доставляем до жилья. Организуем подачу документов на ВНЖ, сдачу отпечатков пальцев и помогаем начать работу.
+      </p>
+    </div>
+  </div>
+    <!-- Часто задаваемые вопросы -->
+  <h2 style="text-align: center; color: #0033a0; margin-bottom: 20px;">Часто задаваемые вопросы</h2>
+  <div style="background-color: #f9f9f9; border: 1px solid #ccc; border-radius: 8px; padding: 20px;">
+    <p style="font-size: 16px; line-height: 1.6;"><strong>Можно ли выбрать конкретное место работы?</strong></p>
+    <p style="font-size: 16px; line-height: 1.6;">
+      Мы учитываем ваши пожелания, но точное распределение зависит от доступных вакансий и вашего опыта. Зарплаты и условия на всех вакансиях примерно одинаковые.
+    </p>
+    <p style="font-size: 16px; line-height: 1.6;"><strong>Сколько времени занимает оформление?</strong></p>
+    <p style="font-size: 16px; line-height: 1.6;">Полный процесс занимает 2,5–3,5 месяца.</p>
+    <p style="font-size: 16px; line-height: 1.6;"><strong>Что делать в случае отказа?</strong></p>
+    <p style="font-size: 16px; line-height: 1.6;">
+      Мы бесплатно подаем документы повторно или помогаем сменить страну и продолжить процесс.
+    </p>
+    <p style="font-size: 16px; line-height: 1.6;"><strong>Как с вами связаться?</strong></p>
+    <p style="font-size: 16px; line-height: 1.6;">Перейдите на наш телеграм канал, где мы проводим бесплатные конфиренции.</p>
+    <p style="font-size: 16px; line-height: 1.6;"><strong>Как заказать документы?</strong></p>
+    <p style="font-size: 16px; line-height: 1.6;">Заполнить ниже анкету кандидата и мы свами свяжемся в течении 1-3х дней.</p>
+  </div>
+
+  <!-- Скрипт для раскрывающегося списка -->
+  <script>
+    function toggleDetails() {
+      const details = document.getElementById('visaDetails');
+      details.style.display = details.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</div>
+
+  <div id="comparisonTable" style="margin-top: 20px; display: none; overflow-x: auto;">
+    <table style="width:100%; border-collapse: collapse; font-family: Arial, sans-serif; border: 1px solid #ddd;">
+      <thead style="background-color: #f2f2f2;">
+        <tr>
+          <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Критерий</th>
+          <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Виза на 90 дней + ВНЖ</th>
+          <th style="padding: 10px; border: 1px solid #ddd; text-align: left;">Национальная виза на 365 дней</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ddd;">Цель визы</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">Краткосрочное пребывание для подачи заявления на ВНЖ с целью трудоустройства.</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">Долгосрочное пребывание с целью непосредственного трудоустройства.</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ddd;">Процедура подачи</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">
+            - Самостоятельная запись через сайт посольства.<br>
+            - Возможность подачи через компанию.
+          </td>
+          <td style="padding: 10px; border: 1px solid #ddd;">
+            - Работодатель подает заявление на трудоустройство.<br>
+            - Работодатель записывает заявителя при наличии квот.
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ddd;">Требуемые документы</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">
+            - Паспорт<br>
+            - Анкета<br>
+            - Фото<br>
+            - Справка о несудимости с апостилем и переводом<br>
+            - Медицинская страховка<br>
+            - Подтверждение финансовой состоятельности<br>
+            - Подтверждение проживания
+          </td>
+          <td style="padding: 10px; border: 1px solid #ddd;">
+            - Паспорт<br>
+            - Анкета<br>
+            - Фото<br>
+            - Трудовой договор или подтверждение от работодателя<br>
+            - Медицинская страховка<br>
+            - Подтверждение финансовой состоятельности<br>
+            - Подтверждение проживания
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ddd;">Срок рассмотрения</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">До 30 дней</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">До 30 дней</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ddd;">Возможность работы</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">После получения ВНЖ</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">Сразу после прибытия</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ddd;">Смена работодателя</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">Возможна после получения ВНЖ</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">Не допускается</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ddd;">Срок действия визы</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">90 дней</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">До 365 дней</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ddd;">Необходимость оформления ВНЖ</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">Обязательно после истечения визы</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">Требуется для продолжения работы после истечения визы</td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ddd;">Преимущества</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">
+            - Возможность смены работодателя<br>
+            - Оформление ВНЖ в Словакии
+          </td>
+          <td style="padding: 10px; border: 1px solid #ddd;">
+            - Сразу можно работать<br>
+            - Меньше требований к документам
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 10px; border: 1px solid #ddd;">Недостатки</td>
+          <td style="padding: 10px; border: 1px solid #ddd;">
+            - Много документов<br>
+            - Работать можно только после ВНЖ
+          </td>
+          <td style="padding: 10px; border: 1px solid #ddd;">
+            - Нельзя менять работодателя<br>
+            - Зависимость от квот
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  function toggleTable() {
+    const table = document.getElementById('comparisonTable');
+    if (table.style.display === 'none' || table.style.display === '') {
+      table.style.display = 'block';
+    } else {
+      table.style.display = 'none';
+    }
+  }
+</script>
